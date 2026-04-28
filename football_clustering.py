@@ -127,7 +127,12 @@ def prepare_visualization_data(
     """Create the plotting dataframe and derived total-goals column."""
 
     player_stats = stats[list(visualization_features)].copy()
-    player_stats["total_goals"] = player_stats["Goals"] * player_stats["90s"]
+    # The source CSVs are inconsistent: 2021/22 column `Goals` stores goals per 90, while
+    # 2022/23 stores total goals. Avoid multiplying already-total goals by 90s.
+    goals_are_per_90 = player_stats["Goals"].max() <= 5
+    player_stats["total_goals"] = player_stats["Goals"]
+    if goals_are_per_90:
+        player_stats["total_goals"] = player_stats["Goals"] * player_stats["90s"]
     return player_stats
 
 
