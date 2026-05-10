@@ -27,3 +27,8 @@ The project is implemented in Python. We currently use `pandas`, `numpy`, `sciki
 ## Motivation
 
 Football data combines domain knowledge with rich, high-dimensional statistics, which makes it a strong fit for exploratory clustering. Our group finds this interesting because it connects machine learning methods with a sport we actively follow and gives us a way to compare player styles beyond standard position labels.
+
+## Original project
+
+We are reproducing same project conducted in R:
+https://rpubs.com/czarek_kuzmowicz/1262334
