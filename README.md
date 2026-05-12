@@ -24,6 +24,29 @@ We plan to clean and filter the data, remove players with very limited playing t
 
 The project is implemented in Python. We currently use `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, and Jupyter Notebook for data preparation, clustering, evaluation, and visualization.
 
+## Running notebooks with Docker
+
+The Docker image uses Python 3.11.8 and installs all Python dependencies needed by both notebooks:
+
+- `Season 21-22 (reproduction).ipynb`
+- `Season 22-23 (extraction).ipynb`
+
+Build and start JupyterLab from the project root:
+
+```bash
+docker compose up --build
+```
+
+Then open:
+
+```text
+http://localhost:8888
+```
+
+Stop JupyterLab with `Ctrl+C`.
+
+The project directory is mounted into the container, so notebook edits and generated files are saved on the host machine.
+
 ## Motivation
 
 Football data combines domain knowledge with rich, high-dimensional statistics, which makes it a strong fit for exploratory clustering. Our group finds this interesting because it connects machine learning methods with a sport we actively follow and gives us a way to compare player styles beyond standard position labels.

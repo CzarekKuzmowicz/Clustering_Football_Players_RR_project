@@ -1,0 +1,8 @@
+services:
+  notebooks:
+    build: .
+    image: football-clustering
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
