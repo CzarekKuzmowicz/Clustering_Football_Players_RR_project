@@ -57,13 +57,16 @@ We are reproducing same project conducted in R:
 https://rpubs.com/czarek_kuzmowicz/1262334
 
 ## Repository structure
-├── data/                       # Raw player statistics (CSV)
+
+```text
+.
+├── data/                                  # Raw player statistics (CSV)
 ├── notebooks/
 │   ├── Season 21-22 (reproduction).ipynb  # Core reproduction of the R project
 │   └── Season 22-23 (extraction).ipynb    # Extension to new data
-├── Dockerfile                  # Docker configuration
-├── docker-compose.yml          # Docker Compose setup
-├── requirements.txt            # Pinned Python dependencies
+├── Dockerfile                             # Docker configuration
+├── docker-compose.yml                     # Docker Compose setup
+├── requirements.txt                       # Pinned Python dependencies
 └── README.md
 
 ## Alternative Setup (Local Environment)
