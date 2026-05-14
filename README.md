@@ -59,7 +59,6 @@ https://rpubs.com/czarek_kuzmowicz/1262334
 ## Repository structure
 
 ```text
-.
 ├── data/                                  # Raw player statistics (CSV)
 ├── notebooks/
 │   ├── Season 21-22 (reproduction).ipynb  # Core reproduction of the R project
@@ -68,6 +67,7 @@ https://rpubs.com/czarek_kuzmowicz/1262334
 ├── docker-compose.yml                     # Docker Compose setup
 ├── requirements.txt                       # Pinned Python dependencies
 └── README.md
+```
 
 ## Alternative Setup (Local Environment)
 ### If you don't want to use Docker:
