@@ -55,3 +55,38 @@ Football data combines domain knowledge with rich, high-dimensional statistics, 
 
 We are reproducing same project conducted in R:
 https://rpubs.com/czarek_kuzmowicz/1262334
+
+## Repository structure
+├── data/                       # Raw player statistics (CSV)
+├── notebooks/
+│   ├── Season 21-22 (reproduction).ipynb  # Core reproduction of the R project
+│   └── Season 22-23 (extraction).ipynb    # Extension to new data
+├── Dockerfile                  # Docker configuration
+├── docker-compose.yml          # Docker Compose setup
+├── requirements.txt            # Pinned Python dependencies
+└── README.md
+
+## Alternative Setup (Local Environment)
+### If you don't want to use Docker:
+
+Create a virtual environment: python -m venv .venv
+Activate it: source .venv/bin/activate (or .venv\Scripts\activate on Windows)
+Install dependencies: pip install -r requirements.txt
+Run Jupyter: jupyter lab
+
+## Reproducibility Features
+Relative Paths: No absolute paths used (e.g., /Users/name/...). All data is accessed via relative directory structures.
+
+Fixed Random Seeds: To ensure identical clustering results across different machines, random_state is fixed in all K-Means and PCA functions.
+
+Pinned Versions: All library versions in requirements.txt are pinned to prevent breaking changes.
+
+## How to run
+
+Start JupyterLab (via Docker or local setup).
+
+Open Season 21-22 (reproduction).ipynb and run all cells to see the reproduction of the original R study.
+
+Open Season 22-23 (extraction).ipynb to see how the model performs on the latest data.
+
+Execution time: Approximately 2-3 minutes on a standard machine.
